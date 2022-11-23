@@ -1,0 +1,19 @@
+@use '../mixins/hover.scss' as*;
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-l);
+    transform: translateX(0);
+    transition: transform 500ms;
+}
+
+@media (hover: hover) {
+    .box-container:hover .box {
+        transform: translateX(calc(1000px - 100% - 4rem));
+    }
+}
